@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // outline: solid 1px magenta;
+
+  @mixin btnbase {
+    background: transparent;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    outline: none;
+    cursor: pointer;
+    margin: 0 2px;
+    transition: 0.3s ease;
+  }
+
+  body{
+    font-family: 'Roboto', sans-serif;
+
+    .container{
+      max-width: 50rem;
+      margin: 2rem auto;
+      padding-bottom: 2rem;
+      -webkit-box-shadow: 0px 4px 22px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 4px 22px 0px rgba(0,0,0,0.75);
+      box-shadow: 0px 4px 22px 0px rgba(0,0,0,0.75);
+
+      header{
+        width: 100%;
+        background: rgb(182, 141, 194);
+        padding: 1rem;
+
+        h3{
+          color: #fff;
+          margin-left: 1.5rem;
+        }
+      }
+
+      .table-wrapper{
+        text-align: center;
+
+        .table-users{
+          width: 90%;
+          margin: 2rem auto;
+          border-collapse: collapse;
+
+          th {
+            background: #eceaea;
+            padding: 1rem auto;
+          }
+          
+          th,
+          td {
+            text-align: left;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: .5rem;
+          }
+
+          .btn{
+            @include btnbase
+          }
+
+          .btn-edit{
+            color: #0000ff;
+            border: 1px solid #0000ff;
+
+            &:hover{
+              background: #0000ff;
+              color: #fff;
+            }
+          }
+
+          .btn-delete{
+            color: #ff0000;
+            border: 1px solid #ff0000;
+
+            &:hover{
+              background: #ff0000;
+              color: #fff;
+            }
+          }
+          
+        }
+      }
+
+      .btn {
+        @include btnbase;
+      }
+      .btn-add{
+        width: 6rem;
+        height: 2rem;
+        background: rgb(182, 141, 194);
+        border: none;
+        color: #fff;
+      }
+
+    }
+  }
+}
